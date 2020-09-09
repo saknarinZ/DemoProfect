@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Demo": {
+    "Project-One": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Demo",
+            "outputPath": "dist/Project-One",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -66,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Demo:build"
+            "browserTarget": "Project-One:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Demo:build:production"
+              "browserTarget": "Project-One:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Demo:build"
+            "browserTarget": "Project-One:build"
           }
         },
         "test": {
@@ -92,6 +94,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -114,19 +118,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Demo:serve"
+            "devServerTarget": "Project-One:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Demo:serve:production"
+              "devServerTarget": "Project-One:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Demo",
-  "cli": {
-    "analytics": false
-  }
+  "defaultProject": "Project-One"
 }
