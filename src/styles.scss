@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: dimgray;
+}
+
+.sidenav {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  background: #FFFFFF;
+  opacity: 95%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a, p {
+  opacity: 100%;
+  padding: 20px 8px 20px 60px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+
+#mySidenav {
+  padding-top: 74px;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
